@@ -20,7 +20,17 @@ export default function App() {
       setItems([...items, { ...plant, quantity: 1 }]);
     }
   };
-  const removeFromCart = () => {};
+  const removeFromCart = (itemToRemove) => {
+    setItems(
+      items
+        .map((item) =>
+          item.id === itemToRemove.id
+            ? { ...item, quantity: item.quantity - 1 }
+            : item,
+        )
+        .filter((item) => item.quantity > 0),
+    );
+  };
 
   return (
     <>
