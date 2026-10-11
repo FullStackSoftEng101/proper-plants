@@ -1,13 +1,16 @@
 import { useState } from "react";
 import PLANTS from "../data";
 import Plant from "./Plant";
+import "./plants.css";
 export default function Plants({ addToCart }) {
   const [plants] = useState(PLANTS);
   return (
-    <ul>
-      {plants.map((plant) => (
-        <Plant key={plant.id} plant={plant} addToCart={addToCart} />
-      ))}
-    </ul>
+    <section className="plants">
+      <ul>
+        {plants.map((plant) => (
+          <Plant key={plant.id} plant={plant} addToCart={addToCart} />
+        ))}
+      </ul>
+    </section>
   );
 }

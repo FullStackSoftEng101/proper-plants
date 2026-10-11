@@ -1,0 +1,16 @@
+.cart-item {
+  padding: 0.25rem;
+  display: grid;
+  gap: 0.25reml;
+}
+.cart-item-qty {
+  padding: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.25reml;
+}
+.cart-item-qty p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
