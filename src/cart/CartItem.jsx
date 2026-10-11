@@ -1,7 +1,7 @@
 export default function CartItem({ item, addToCart, removeFromCart }) {
   return (
     <li>
-      <p>{item.img}</p>
+      <p>{item.image}</p>
       <p>{item.name}</p>
       <div>
         <button onClick={() => removeFromCart(item)}>-</button>

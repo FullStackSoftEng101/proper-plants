@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Cart from "./Cart2";
-import Plants from "./Plants";
+import Cart from "./cart/Cart2";
+import Plants from "./plants/Plants";
 
 export default function App() {
   const [items, setItems] = useState([]);
@@ -35,13 +35,15 @@ export default function App() {
   return (
     <>
       <h1>Proper Plants</h1>
-      <Plants addToCart={addToCart} />
+      <main>
+        <Plants addToCart={addToCart} />
 
-      <Cart
-        items={items}
-        addToCart={addToCart}
-        removeFromCart={removeFromCart}
-      />
+        <Cart
+          items={items}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+        />
+      </main>
     </>
   );
 }
